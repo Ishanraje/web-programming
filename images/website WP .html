@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>LOCKEDnLOADED</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <style media="screen">
+        
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: 'Oswald', sans-serif;
+
+}
+body{
+    overflow-x: hidden ;
+    background: white;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    margin-left: 145px;
+}
+.card{
+    height: 550px;
+    width: 280px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    box-shadow: 2px 2px 8px  grey;
+
+}
+.card img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+}
+.card .info{
+    text-align: center;
+    line-height: 25px;
+}
+.card .info h3{
+    color: #333;
+    padding-top: 5px;
+}
+.card .info .stars{
+    color: rgb(107, 105, 98);
+    padding: 10px 0;
+}
+.card .info .price{
+    font-size: 20px;
+    color: #0e0e0e;
+    letter-spacing: 1px;
+}
+.card .discount{
+    position: absolute;
+    top: 15px; left: 15px;
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: rgba(255,0,0,0.6); 
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    opacity:0;
+}
+.card .panel{
+    position: absolute;
+    top: 15px; right: -50%;
+    width: 45px;
+    background: rgba(255, 255, 255, .8);
+    display: flex;
+    align-items: center;
+ flex-flow: column;
+ opacity: 0;
+ transition-delay: .2s;
+}
+.card:hover .panel{
+    right:15px;
+    opacity: 1;
+
+
+}
+
+.card .panel a{
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0;
+
+}
+.card .panel a:hover{
+    color:rgba(255,0,0,0.9)
+}
+.card button{
+    position: absolute;
+    left: 50%; bottom: 0%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 140px;
+    border: none;
+    outline: none;
+    background: black ;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transition-delay: .2s;
+}
+
+.card:hover button{
+    opacity: 1;
+    bottom: 25%;
+}
+
+
+
+.card button:hover{
+    background-color:rgba(248, 24, 20, 0.847);
+    transition: .2s;
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px 20px 15px;
+    background: black;
+    box-shadow: 0 5px 15px white;
+    position:fixed;
+    z-index: 112;
+    width:100%;
+}
+.header a{
+    text-decoration: none;
+}
+.header span{
+    font-family: 'Bebas Neue',cursive;
+    
+    color: white;
+    font-size: 30px;
+}
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+.navbar li a{
+    font-family: 'Bebas Neue',cursive;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease;
+}
+.create{
+    margin-left: 400px;
+}
+.navbar li a:hover,
+.navbar li a.active
+{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-shadow: 2px 2px 12px white;
+    font-size: larger;
+}
+.hero{
+    height: 500px;
+margin-bottom: 20px;
+border-bottom: #0e0e0e;}
+.heroimg{
+    object-fit: contain;
+    height:500px;
+    position:relative;
+    
+}
+.imgtext{
+    position: absolute;
+    text-align: left;
+    left: 50%;
+    top:20%;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width:auto;
+    margin-top: 25px;
+    z-index:500;
+}
+.sidebar-link{
+    background-color: white;
+    height: 219px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+.brand{
+    padding-inline: 10px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+.tick{
+    padding: 15px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.sidebar{
+  border-right: 2px solid grey;
+}
+.head-banner{
+    text-align: center;
+    font-family:  'Oswald', sans-serif;
+    color: #fff;
+    font-size: 50px;
+    display: block;
+  
+  
+}
+.body-banner{
+    margin-top: 30px;
+    color: white;
+    width: 610px;
+    font-size: 30px;
+
+
+
+
+}
+        </style>
+</head>
+<body>
+   
+<div class="sidebar">
+    <div class="sidebar-link">
+     <h3> <span class="brand">Brand</span></h3>
+      <div class="tick">
+        <input type="checkbox" id="check">
+        <label for="check">Smith & wesson</label><br>
+        <input type="checkbox" id="check">
+        <label for="check">Glock Ges.m.b.H</label><br>
+        <input type="checkbox" id="check">
+        <label for="check">Sturm, Ruger & Co.</label><br>
+        <input type="checkbox" id="check">
+        <label for="check">Winchester Repeating Arms</label><br>
+        <input type="checkbox" id="check">
+        <label for="check">Springfield Armory, Inc.</label><br>
+        <input type="checkbox" id="check">
+        <label for="check">Colt Defense</label><br>
+      </div>
+    </div>
+    <div class="sidebar-link">
+        <h3> <span class="brand">Type</span></h3>
+        <div class="tick">
+          <input type="checkbox" id="check">
+          <label for="check">SHOTGUN</label><br>
+          <input type="checkbox" id="check">
+          <label for="check">ASSAULT RIFLE</label><br>
+          <input type="checkbox" id="check">
+          <label for="check">SNIPER</label><br>
+          <input type="checkbox" id="check">
+          <label for="check">PISTOLS</label><br>
+          <input type="checkbox" id="check">
+          <label for="check">SEMI-AUTO</label><br>
+          <input type="checkbox" id="check">
+          <label for="check">GRENADE LAUNCHERS</label><br>
+        </div>
+    </div>
+    <div class="sidebar-link"></div>
+</div>
+
+    <div class="header">
+        <a href=""><span >LOCKED AND LOADED</span></a>
+       
+        <div>
+            <ul class="navbar">
+                <li><a class ="active" href= "homepage.html">HOME</a></li>
+                <li><a href= "1.html">SHOP</a></li>
+                <li><a href= "1.html">CONTACT US</a></li>
+                <li><a class="create" href= "1.html"></a></li>
+                <li><a href= "cart.html"><i class ="fa fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero">
+        <img class ="heroimg" src="img/bg.png">
+        <div class ="imgtext">
+            <span class="head-banner">SHOPPING WITHOUT LIMITS</span>
+            <p class="body-banner">You can choose the best option for you, and it does not matter whether you are in Tibet or Taiwan. We will deliver your purchase anywhere!</p>
+            
+    </div> 
+   
+    <div class="container">
+            <div class="card">
+            <img src="img/g1.png" alt="">
+            <span class="discount">-5%</span>
+            <div class="panel">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-search"></a>
+            </div>
+            <a href="#"><button>add to cart</button></a>
+            <div class="info">
+                <h3>AK-47(NO SCOPE ATTACHED)</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                
+                <i class="fas fa-star-half-alt"></i>
+        </div>
+        <strong class="price">850$/-</strong>
+           
+    </div>
+    </div>
+    <div class="card">
+        <img src="img/g2.png" alt="">
+        <span class="discount">-5%</span>
+        <div class="panel">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+        <a href="#"><button>add to cart</button></a>
+        <div class="info">
+            <h3>Accuracy International G22 </h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+           
+    </div>
+    <strong class="price">2400$/-</strong>
+       
+</div>
+</div>
+
+<div class="card">
+    <img src="img/g3.png" alt="">
+    <span class="discount">-5%</span>
+    <div class="panel">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-share"></a>
+        <a href="#" class="fas fa-search"></a>
+    </div>
+    <a href="#"><button>add to cart</button></a>
+    <div class="info">
+        <h3>AKS-74U (WITH 2X SCOPE)</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">1900$/-</strong>
+   
+</div>
+</div>
+<div class="card">
+<img src="img/g4.png" alt="">
+<span class="discount">-5%</span>
+<div class="panel">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-search"></a>
+</div>
+<a href="#"><button>add to cart</button></a>
+<div class="info">
+    <h3>IWI Tavor Blac</h3>
+<div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">12000$/-</strong>
+
+</div>
+</div>
+<div class="card">
+    <img src="img/g5.png" alt="">
+    <span class="discount">-5%</span>
+    <div class="panel">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-share"></a>
+        <a href="#" class="fas fa-search"></a>
+    </div>
+    <a href="#"><button>add to cart</button></a>
+    <div class="info">
+        <h3>Mauser K98 Rifle</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+       
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">3500$/-</strong>
+   
+</div>
+</div>
+<div class="card">
+<img src="img/g6.png" alt="">
+<span class="discount">-5%</span>
+<div class="panel">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-search"></a>
+</div>
+<a href="#"><button>add to cart</button></a>
+<div class="info">
+    <h3>Smith & Wesson Revolver</h3>
+<div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  
+</div>
+<strong class="price">1599$/-</strong>
+
+</div>
+</div>
+<div class="card">
+    <img src="img/g7.png" alt="">
+    <span class="discount">-5%</span>
+    <div class="panel">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-share"></a>
+        <a href="#" class="fas fa-search"></a>
+    </div>
+    <a href="#"><button>add to cart</button></a>
+    <div class="info">
+        <h3>M4A1 Mark 18 </h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price"> 700$/-</strong>
+   
+</div>
+</div>
+<div class="card">
+<img src="img/g8.png" alt="">
+<span class="discount">-5%</span>
+<div class="panel">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-search"></a>
+</div>
+<a href="#"><button>add to cart</button></a>
+<div class="info">
+    <h3>Dan Wesson 1911</h3>
+<div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">1690$/-</strong>
+
+</div>
+</div>
+<div class="card">
+    <img src="img/g9.png" alt="">
+    <span class="discount">-5%</span>
+    <div class="panel">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-share"></a>
+        <a href="#" class="fas fa-search"></a>
+    </div>
+    <a href="#"><button>add to cart</button></a>
+    <div class="info">
+        <h3>Colt AR-15</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">1000$/-</strong>
+   
+</div>
+</div>
+<div class="card">
+<img src="img/g10.png" alt="">
+<span class="discount">-5%</span>
+<div class="panel">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-search"></a>
+</div>
+<a href="#"><button>add to cart</button></a>
+<div class="info">
+    <h3>Spike X1S Bullpup AK</h3>
+<div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">2500$/-</strong>
+
+</div>
+</div>
+<div class="card">
+    <img src="img/g11.png" alt="">
+    <span class="discount">-5%</span>
+    <div class="panel">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-share"></a>
+        <a href="#" class="fas fa-search"></a>
+    </div>
+    <a href="#"><button>add to cart</button></a>
+    <div class="info">
+        <h3>KRISS Vector Super V</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+</div>
+<strong class="price">1369$/-</strong>
+   
+</div>
+</div>
+<div class="card">
+<img src="img/g12.png" alt="">
+<span class="discount">-5%</span>
+<div class="panel">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-search"></a>
+</div>
+<a href="#"><button>add to cart</button></a>
+<div class="info">
+    <h3>Benelli ETHOS</h3>
+<div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+</div>
+<strong class="price">2149$/-</strong>
+
+</div>
+</div>
+    </div>
+
+</body>
+
+</html>

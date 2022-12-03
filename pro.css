@@ -1,0 +1,97 @@
+*{
+    font-family: 'Oswald', sans-serif;
+
+}
+body{
+    margin: 0;
+    width:100%;
+    padding-top: 100px;}
+p{
+    font-size: 45px;
+    font-weight: 600;
+    padding: 20px 20px;
+    text-align:center;
+    
+    
+    
+}
+#prodetail {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetail .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+    border-right: 1px solid grey;
+    
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 8px grey;
+    margin-top: 10px;
+}
+
+.small-img-col{
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+#prodetail .single-pro-detail{
+    width: 50%;
+    padding-top: 0px;
+}
+
+#prodetail .single-pro-detail h4{
+    padding: 100px 0 20px 0;
+}
+#prodetail .single-pro-detail h2{
+    font-size: 36px; 
+    padding-left: 27%;
+}
+#prodetail .single-pro-detail h5{
+padding-left: 27%;
+}
+#prodetail .single-pro-detail h6{
+    padding-left: 27%;
+}
+
+#prodetail .single-pro-detail select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-left: 27%;
+}
+
+#prodetail .single-pro-detail input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 27%;
+
+}
+
+#prodetail .single-pro-detail input:focus {
+    outline: none;
+}
+
+#prodetail .single-pro-detail button{
+    background: rgb(0, 0, 0);
+    border-radius: 2px;
+    border:none;
+    color: white;
+    font-size: x-large;
+
+} 
+
+#prodetail .single-pro-detail span{
+    line-height: 25px;
+}
+.normal{
+    margin-left: 27%;
+}
+
